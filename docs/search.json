@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nNick Petersen\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nick Petersen",
+    "section": "",
+    "text": "My name is Nick Petersen and I was born and raised in Vancouver. I studied Math and Computer Science at Queen’s University. I enjoy watching and playing sports like basketball and football. I’m hoping to learn tons about the world of data science and learn and improve my skills for my future career.\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "posts/first-weeks/index.html",
+    "href": "posts/first-weeks/index.html",
+    "title": "My first weeks in MDS",
+    "section": "",
+    "text": "MDS Orientation\n\n\nI’ve had a pretty good start at MDS. Orientation was pretty fun, it was nice to meet my classmates and play some games. There was a lot of information as well, some helpful, some more itimidating, but it was nice to get a better understading of the program. My favourite part was the scavenger goose chase activity, it was pretty fun and good to learn where my classes would be.\nFirst week of class was pretty good as well. I was a bit unsure after the first day or two, because all of the github stuff is new to me and I was just confused on how it all worked. I also have a limited history of using terminal so this has been a bit of an adjustment. But now I’m already feeling much better about it. Most of the assignments last week went pretty well.\nNow I’m just starting this week. I’m feeling better going into it, I just need to make sure I am prepared for quiz week next week by getting my work done early and leaving extra time to study, especially with class on friday this week."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -26,26 +47,5 @@
     "title": "About",
     "section": "Outside of Data Science",
     "text": "Outside of Data Science\nOutside of my studies, I enjoy playing and watching sports. I like to play basketball and golf, and enjoy watching NBA and NFL. I also enjoy a variety of puzzles, playing board/card games, and hanging out with my friends."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Nick Petersen",
-    "section": "",
-    "text": "My name is Nick Petersen and I was born and raised in Vancouver. I studied Math and Computer Science at Queen’s University. I enjoy watching and playing sports like basketball and football. I’m hoping to learn tons about the world of data science and learn and improve my skills for my future career.\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nNick Petersen\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/first-weeks/index.html",
-    "href": "posts/first-weeks/index.html",
-    "title": "My first weeks in MDS",
-    "section": "",
-    "text": "MDS Orientation\n\n\nI’ve had a pretty good start at MDS. Orientation was pretty fun, it was nice to meet my classmates and play some games. There was a lot of information as well, some helpful, some more itimidating, but it was nice to get a better understading of the program. My favourite part was the scavenger goose chase activity, it was pretty fun and good to learn where my classes would be.\nFirst week of class was pretty good as well. I was a bit unsure after the first day or two, because all of the github stuff is new to me and I was just confused on how it all worked. I also have a limited history of using terminal so this has been a bit of an adjustment. But now I’m already feeling much better about it. Most of the assignments last week went pretty well.\nNow I’m just starting this week. I’m feeling better going into it, I just need to make sure I am prepared for quiz week next week by getting my work done early and leaving extra time to study, especially with class on friday this week."
   }
 ]
