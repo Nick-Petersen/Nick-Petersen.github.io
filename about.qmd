@@ -2,4 +2,14 @@
 title: "About"
 ---
 
-About this site
+## Background
+
+My name is Nick Petersen. I grew up here in Vancouver and studied at Queen's University for my undergrad. I majored in Math and minored in Computer Science. I was a data science intern in summer of 2025 for a medical company called Canary Medical.
+
+## Why Data Science?
+
+I chose to study data science because it combines two areas I have always enjoyed: math and computer science. I like being able to take any amount of data and use it to answer questions or find patterns that might not be obvious at first. After my internship in 2025, I knew it was something I wanted to continue pursuing.
+
+## Outside of Data Science
+
+Outside of my studies, I enjoy playing and watching sports. I like to play basketball and golf, and enjoy watching NBA and NFL. I also enjoy a variety of puzzles, playing board/card games, and hanging out with my friends. 
