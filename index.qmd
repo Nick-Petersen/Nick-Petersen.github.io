@@ -1,9 +1,10 @@
 ---
 title: "Nick Petersen"
----
+
 about:
-  template: jolla
+  template: solana
   image: images/profile.jpg
+---
 
 My name is Nick Petersen and I was born and raised in Vancouver. I studied Math and Computer Science at Queen's University. I enjoy watching and playing sports like basketball and football.
 I'm hoping to learn tons about the world of data science and learn and improve my skills for my future career. 

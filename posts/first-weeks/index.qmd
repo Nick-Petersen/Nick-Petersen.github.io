@@ -1,0 +1,13 @@
+---
+title: "My first weeks in MDS"
+author: "Nick Petersen"
+date: 2026-09-09
+---
+
+![MDS Orientation](orientation.jpg)
+
+I've had a pretty good start at MDS. Orientation was pretty fun, it was nice to meet my classmates and play some games. There was a lot of information as well, some helpful, some more itimidating, but it was nice to get a better understading of the program. My favourite part was the scavenger goose chase activity, it was pretty fun and good to learn where my classes would be.
+
+First week of class was pretty good as well. I was a bit unsure after the first day or two, because all of the github stuff is new to me and I was just confused on how it all worked. I also have a limited history of using terminal so this has been a bit of an adjustment. But now I'm already feeling much better about it. Most of the assignments last week went pretty well.
+
+Now I'm just starting this week. I'm feeling better going into it, I just need to make sure I am prepared for quiz week next week by getting my work done early and leaving extra time to study, especially with class on friday this week.
