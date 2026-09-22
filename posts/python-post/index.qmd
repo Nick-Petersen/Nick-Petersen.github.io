@@ -1,0 +1,80 @@
+---
+title: "Exploring Palmer Penguins with Python"
+author: "Nick Petersen"
+date: "2026-09-22"
+---
+
+## Introduction
+
+In this post, I'm exploring the Palmer Penguins dataset using Python. I'm looking at how body mass and flipper length differ between species.
+
+Data: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/), Palmer Station Antarctica LTER.
+
+The Palmer Penguins data are available under the CC0 license.
+
+## Setup
+
+```{python}
+#| message: false
+#| warning: false
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from palmerpenguins import load_penguins
+```
+
+## Loading the data
+
+First, I load the Palmer Penguins dataset and look at the first few rows to understand its structure.
+
+```{python}
+penguins = load_penguins()
+penguins.head()
+```
+
+The dataset contains measurements for individual penguins, including their species, bill measurements, flipper length, body mass, sex, and island.
+
+## Comparing species
+
+Next, I calculate the average body mass and flipper length for each penguin species. This allows us to compare the typical size of the three species.
+
+```{python}
+species_summary = (
+    penguins.groupby("species")
+    .agg(
+        average_body_mass=("body_mass_g", "mean"),
+        average_flipper_length=("flipper_length_mm", "mean")
+    )
+    .round(2)
+)
+
+species_summary
+```
+
+The summary shows that the three species differ in both average body mass and average flipper length.
+
+## Body mass and flipper length
+
+Finally, I visualize the relationship between flipper length and body mass for each penguin species.
+
+```{python}
+#| label: fig-penguin-size
+#| fig-cap: "Body mass and flipper length of Palmer Penguins by species."
+
+for species in penguins["species"].dropna().unique():
+    subset = penguins[penguins["species"] == species]
+    plt.scatter(
+        subset["flipper_length_mm"],
+        subset["body_mass_g"],
+        label=species,
+        alpha=0.7
+    )
+
+plt.xlabel("Flipper Length (mm)")
+plt.ylabel("Body Mass (g)")
+plt.title("Penguin Body Mass vs. Flipper Length")
+plt.legend(title="Species")
+plt.show()
+```
+
+The plot shows a positive relationship between flipper length and body mass. Penguins with longer flippers generally have greater body mass. Gentoo penguins also tend to be larger than Adelie and Chinstrap penguins in these measurements.

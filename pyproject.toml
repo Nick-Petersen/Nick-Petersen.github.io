@@ -1,17 +1,11 @@
 [project]
 name = "nick-petersen-github-io"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-authors = [
-    { name = "Nick Petersen", email = "npeter02@student.ubc.ca" }
-]
 requires-python = ">=3.14"
-dependencies = []
-
-[project.scripts]
-nick-petersen-github-io = "nick_petersen_github_io:main"
-
-[build-system]
-requires = ["uv_build>=0.12.7,<0.13.0"]
-build-backend = "uv_build"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.2",
+    "palmerpenguins>=0.1.6",
+    "pandas>=3.0.6",
+]
