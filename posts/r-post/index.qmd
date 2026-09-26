@@ -1,12 +1,12 @@
 ---
-title: "Exploring Palmer Penguins with Python"
+title: "Exploring Palmer Penguins with R"
 author: "Nick Petersen"
 date: "2026-09-22"
 ---
 
 ## Introduction
 
-In this post, I explore the Palmer Penguins dataset using Python. I look at how body mass and flipper length differ between species.
+In this post, I explore the Palmer Penguins dataset using R. I look at how body mass and flipper length differ between the three penguin species in the dataset.
 
 Data: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/), Palmer Station Antarctica LTER.
 
@@ -14,22 +14,22 @@ The Palmer Penguins data are available under the CC0 license.
 
 ## Setup
 
-```{python}
+```{r}
 #| message: false
 #| warning: false
 
-import pandas as pd
-import matplotlib.pyplot as plt
-from palmerpenguins import load_penguins
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
 ```
 
 ## Loading the data
 
 First, I load the Palmer Penguins dataset and look at the first few rows to understand its structure.
 
-```{python}
-penguins = load_penguins()
-penguins.head()
+```{r}
+penguins <- palmerpenguins::penguins
+head(penguins)
 ```
 
 The dataset contains measurements for individual penguins, including their species, bill measurements, flipper length, body mass, sex, and island.
@@ -38,15 +38,13 @@ The dataset contains measurements for individual penguins, including their speci
 
 Next, I calculate the average body mass and flipper length for each penguin species. This allows us to compare the typical size of the three species.
 
-```{python}
-species_summary = (
-    penguins.groupby("species")
-    .agg(
-        average_body_mass=("body_mass_g", "mean"),
-        average_flipper_length=("flipper_length_mm", "mean")
-    )
-    .round(2)
-)
+```{r}
+species_summary <- penguins |>
+  group_by(species) |>
+  summarize(
+    average_body_mass = mean(body_mass_g, na.rm = TRUE),
+    average_flipper_length = mean(flipper_length_mm, na.rm = TRUE)
+  )
 
 species_summary
 ```
@@ -57,24 +55,25 @@ The summary shows that the three species differ in both average body mass and av
 
 Finally, I visualize the relationship between flipper length and body mass for each penguin species.
 
-```{python}
-#| label: fig-penguin-size
+```{r}
+#| label: fig-penguin-size-r
 #| fig-cap: "Body mass and flipper length of Palmer Penguins by species."
 
-for species in penguins["species"].dropna().unique():
-    subset = penguins[penguins["species"] == species]
-    plt.scatter(
-        subset["flipper_length_mm"],
-        subset["body_mass_g"],
-        label=species,
-        alpha=0.7
-    )
-
-plt.xlabel("Flipper Length (mm)")
-plt.ylabel("Body Mass (g)")
-plt.title("Penguin Body Mass vs. Flipper Length")
-plt.legend(title="Species")
-plt.show()
+ggplot(
+  penguins,
+  aes(
+    x = flipper_length_mm,
+    y = body_mass_g,
+    color = species
+  )
+) +
+  geom_point(alpha = 0.7) +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)",
+    color = "Species",
+    title = "Penguin Body Mass vs. Flipper Length"
+  )
 ```
 
 The plot shows a positive relationship between flipper length and body mass. Penguins with longer flippers generally have greater body mass. Gentoo penguins also tend to be larger than Adelie and Chinstrap penguins in these measurements.
